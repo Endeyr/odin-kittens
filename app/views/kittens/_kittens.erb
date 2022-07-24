@@ -1,0 +1,20 @@
+<div class="columns">
+  <% kittens.each do |kitten| %>
+    <div class="box">
+      <article class="media">
+        <div class="media-content">
+          <div class="content row">
+            <strong>Name: <%= kitten.name %></strong>
+            <small>Age: <%= kitten.age %></small>
+            <small>Cuteness: <%= kitten.cuteness %></small>
+            <small>Softness: <%= kitten.softness %></small>
+            <br>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p>
+      <%= link_to "Show this kitten", kitten %>
+    </p>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+<p style="color: green"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <h1>Kittens</h1>
+    <%= render 'kittens', kittens:@kittens %>
+    <%= link_to "New kitten", new_kitten_path %>
+  </div>
+</section>

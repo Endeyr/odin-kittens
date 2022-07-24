@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@kitten) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: "Your kitten's name?" %>
+    <%= f.input :age, collection: 0..25, label: "Your kitten's age?" %>
+    <%= f.input :cuteness, collection: 1..10, label: "Your kitten's cuteness?" %>
+    <%= f.input :softness, collection: 1..10, label: "Your kitten's softness?" %>
+    <br>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "button is-info" %>
+  </div>
+<% end %>
